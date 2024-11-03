@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan8_Ontap</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/H1.css" rel="stylesheet">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+</head>
+
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-12">
+                <img src="../img/boi.jpg" alt="Description of Image" width="100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <nav class="navbar">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Đăng ký</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Trợ giúp</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row">
+            <table class="table table-bordered table-light table-primary table-hover table-striped" id="tbDanhSach">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã học viên</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>Tiền dịch vụ</th>
+                        <th>Tiền đồ dùng</th>
+                        <th>Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>50</td>
+                        <td>22640841</td>
+                        <td>Quốc Sáng</td>
+                        <td>sangtranquocgl@gmail.com</td>
+                        <td>30000</td>
+                        <td>10000</td>
+                        <td>40000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="">THÔNG TIN THANH TOÁN</h5>
+                            <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-control">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Mã học viên:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" placeholder="22640841" id="txtMa">
+                                        <span id="tbMa" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Họ tên:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="txtHT" class="form-control" placeholder="Tran Quoc Sang">
+                                        <span id="tbTen" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Email:</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control" placeholder="sangtranquocgl@gmail.com" id="txtDC">
+                                        <span id="tbDC" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Dịch vụ:</label>
+                                    <div class="col-sm-9">
+                                        <select name="gia" class="form-control" id="slGia">
+                                            <option value="2000">Bơi</option>
+                                            <option value="3000">Trượt ván</option>
+                                            <option value="5000">Moto nước</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Giá tiền:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtDV" class="form-control" id="txtDV" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Đồ dùng:</label>
+                                    <div class="col-sm-9">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="chkDoDung" class="form-check-input" value="20000"> Áo quần bơi
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="chkDoDung" class="form-check-input" value="50000"> Phao
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="chkDoDung" class="form-check-input" value="70000"> Kính bơi
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Chi phí đồ dùng:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtDD" id="txtDD" class="form-control" value="0" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Tổng tiền:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtTong" id="txtTong" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="button" value="Thanh toán" id="btnSave" class="btn btn-success btn-block">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="reset" value="Hủy" class="btn btn-danger btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <h4>Trang thanh toán</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h6>Mã sinh viên:________________</h6>
+            </div>
+            <div class="col-md-4">
+                <h6>Họ tên:_________________</h6>
+            </div>
+            <div class="col-md-4">
+                <h6>Phòng thi:_______________</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
